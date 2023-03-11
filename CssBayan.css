@@ -140,7 +140,7 @@ body {
 	margin: 0 10%;
 }
 
-.bayan-item1 {
+.bayan-item1,.bayan-item2,.bayan-item3,.bayan-item4,.bayan-item5  {
 	border-top: 1px solid black;
 	position: relative;
 }
@@ -157,11 +157,13 @@ body {
 	display: inline-block;
 	right: 0;
 }
+.bayan_img {
+	text-align: center;
+	padding: 1em;
+	display: none;
+}
 .xmark {
 }
 .check {
 	display: none;
-}
-.bayan_img {
-	text-align: center;
 }

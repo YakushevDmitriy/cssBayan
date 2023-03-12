@@ -126,7 +126,7 @@ legend {
 h2 {
 	font-size: 32px;
 	font-weight: bold;
-	margin: 1em 0em;
+	margin: 1em 0;
 }
 body {
 	background-color: #f6f6ec;
@@ -135,12 +135,10 @@ body {
 	max-width: 1920px;
 	margin: 0 auto;
 }
-
 .bayan {
-	margin: 0 10%;
+	margin: 0 10em;
 }
-
-.bayan-item1,.bayan-item2,.bayan-item3,.bayan-item4,.bayan-item5  {
+.bayan-item {
 	border-top: 1px solid black;
 	position: relative;
 }
@@ -150,20 +148,65 @@ body {
 	font-weight: bold;
 	display: block;
 	position: relative;
+	color: blue;
+}
+.bayan_input {
+	position: absolute;
+	opacity: 0;
 }
 .bayan_name_check {
 	position: absolute;
 	width: 15px;
 	display: inline-block;
 	right: 0;
+	padding: 10px 0;
 }
 .bayan_img {
 	text-align: center;
-	padding: 1em;
+	padding: 1em 0;
 	display: none;
 }
 .xmark {
+	display: none;
 }
 .check {
+	display: none;
+}
+.bayan:hover .bayan_name {
+	color: black;
+}
+.bayan_input:checked ~ .bayan_name {
+	color: black;
+}
+.bayan:hover .xmark {
+	display: block;
+	animation: shows 1.5s;
+}
+.bayan-item:hover .bayan_img {
+	display: block;
+	animation: shows 1.5s;
+}
+@keyframes shows {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+.bayan_input:checked ~ .bayan_img {
+	display: block;
+}
+.bayan_input:checked ~ .bayan_name_check > .xmark {
+	display: none;
+}
+.bayan_input:checked ~ .bayan_name_check > .check {
+	display: block;
+}
+.bayan-item:hover .check {
+	display: block;
+}
+.bayan-item:hover .xmark {
 	display: none;
 }
